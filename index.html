@@ -5,113 +5,173 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MOPA - Hasiera</title>
-    <link rel="stylesheet" href="Styles/iniciopub.css">
-    <link rel="Shortcut icon" href="img/mopa.ico" type="image/x-icon">
     <style>
-        /* Estilos básicos en línea (puedes añadir más si es necesario) */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            background-color: #f0f4f7;
         }
 
-        header, nav, footer {
-            background-color: #f0f0f0;
+        header {
+            background: linear-gradient(to right, #4caf50, #2196f3);
+            padding: 20px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        header img {
+            height: 50px;
+        }
+
+        nav {
+            margin-top: 20px;
             text-align: center;
-            padding: 10px 0;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
         }
 
         .banner-container {
             text-align: center;
+            position: relative;
         }
 
-        .banner {
-            max-width: 100%;
-            height: auto;
+        .banner-container .banner {
+            width: 100%;
+            max-height: 300px;
+            object-fit: cover;
         }
 
-        .Bienvenido {
+        .search-bar {
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #00796b;
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            width: 90%;
+            max-width: 800px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .search-bar input,
+        .search-bar select,
+        .search-bar button {
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+        }
+
+        .search-bar button {
+            background-color: #4caf50;
+            color: white;
+            cursor: pointer;
+        }
+
+        .content {
             text-align: center;
-            padding: 20px;
+            margin: 50px 20px;
         }
 
-        .tarjetas {
+        .content h1 {
+            color: #00796b;
+            font-size: 36px;
+        }
+
+        .content h3 {
+            color: #4caf50;
+            font-size: 20px;
+        }
+
+        .cards {
             display: flex;
             flex-wrap: wrap;
             gap: 20px;
             justify-content: center;
+            margin-top: 30px;
+        }
+
+        .card {
+            background-color: white;
             padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 300px;
+            text-align: left;
         }
 
-        .traj1 {
-            background-color: #f9f9f9;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            padding: 15px;
-            width: 300px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        ul {
-            padding: 0;
-            list-style-type: none;
-        }
-
-        ul li {
-            margin: 10px 0;
+        footer {
+            background-color: #00796b;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
         }
     </style>
 </head>
 
 <body>
-    <!-- Cabecera -->
     <header>
-        <h1>MOPA</h1>
-        <p>Mugikortasun Optimoa Pertsonen Atzigarritasunarentzat</p>
+        <img src="img/mopa.ico" alt="MOPA Logo">
+        <nav>
+            <a href="#">Bilatu</a>
+            <a href="#">Bidai bat argitaratu</a>
+        </nav>
     </header>
 
-    <!-- Banner y navegación -->
     <div class="banner-container">
-        <img class="banner" src="img/banner.jpeg" alt="Banner">
-        <nav>
-            <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Servicios</a></li>
-                <li><a href="#">Contacto</a></li>
-            </ul>
-        </nav>
+        <div class="banner" style="background: linear-gradient(to right, #4caf50, #2196f3); height: 200px;"></div>
+        <div class="search-bar">
+            <input type="text" placeholder="Jatorria">
+            <input type="text" placeholder="Helmuga">
+            <input type="date" value="2024-12-02">
+            <select>
+                <option>1 Bidaiari</option>
+                <option>2 Bidaiari</option>
+                <option>3 Bidaiari</option>
+            </select>
+            <button>Bilatu</button>
+        </div>
     </div>
 
-    <!-- Mensaje de bienvenida -->
-    <div class="Bienvenido">
+    <div class="content">
         <h1>Ongi etorri MOPAra</h1>
         <h3>(Mugikortasun Optimoa Pertsonen Atzigarritasunarentzat)</h3>
-    </div>
 
-    <!-- Sección de tarjetas -->
-    <div class="tarjetas">
-        <div class="traj1">
-            <p>MOPA-n gure helburua mugikortasun-arazoak dituzten pertsonentzako garraio inklusiboa erraztea da. Gure plataforma erabiltzaileei aukera ematen die ibilbideak antolatzeko eta partekatzeko, betiere irisgarritasuna eta eraginkortasuna kontuan hartuta. Gure sistema adimendunak ibilbide eraginkorrenak eta azkarrenak aurkitzen ditu, denbora eta baliabideak aurrezteko. Gainera, gure komunitateak elkarri laguntzea eta segurtasuna lehenesten ditu, erabiltzaileen arteko konexioak eta laguntza sustatuz. MOPA-n, mugikortasun inklusiboa eta irisgarria eskaintzea da gure helburua, pertsona guztien beharrei erantzuteko.</p>
-        </div>
-        <div class="traj1">
-            <p>Gure plataformaren bidez, ibilbideak antolatzea sinplifikatzen dugu, erabiltzaileen beharrak kontuan hartuta...</p>
-            <p>Gainera, gure sistema adimendunak ibilbide eraginkorrenak eta azkarrenak aurkitzen ditu, denbora eta baliabideak aurrezteko.</p>
-            <p>Plataformak erabiltzaileei aukera ematen die ibilbideak partekatzeko eta komunitate bat sortzeko, non elkarri laguntzea eta segurtasuna lehenesten diren.</p>
-            <p>Gure helburua da mugikortasun inklusiboa eta irisgarria eskaintzea, pertsona guztien beharrei erantzuteko.</p>
-        </div>
-        <div class="traj1">
-            <h3>Zergatik MOPA?</h3>
-            <ul>
-                <li>Irisgarritasuna bermatuta: Plataforma honetako ibilgailu eta ibilbide guztiak irisgarritasun baldintzak betetzen dituzte.</li>
-                <li>Errepikatzen diren bidaiak: Lana, unibertsitatea edo eguneroko jarduerak bezalako ibilbide erregularrak egiten dituzentzat aproposa.</li>
-                <li>Giza konexioak: Ez da soilik mugikortasuna, baizik eta laguntza, errespetua eta segurtasuna sustatzen dituen ingurune batean egitea, elkarri laguntzea bultzatuz.</li>
-            </ul>
+        <div class="cards">
+            <div class="card">
+                <p>MOPA-n gure helburua mugikortasun-arazoak dituzten pertsonentzako garraio inklusiboa erraztea da...</p>
+            </div>
+            <div class="card">
+                <p>Gure plataformaren bidez, ibilbideak antolatzea sinplifikatzen dugu...</p>
+                <p>Gainera, gure sistema adimendunak ibilbide eraginkorrenak aurkitzen ditu...</p>
+            </div>
+            <div class="card">
+                <h3>Zergatik MOPA?</h3>
+                <ul>
+                    <li>Irisgarritasuna bermatuta...</li>
+                    <li>Errepikatzen diren bidaiak...</li>
+                    <li>Giza konexioak...</li>
+                </ul>
+            </div>
         </div>
     </div>
 
-    <!-- Pie de página -->
     <footer>
-        <p>© 2024 MOPA - Mugikortasun Optimoa Pertsonen Atzigarritasunarentzat</p>
+        &copy; 2024 MOPA - Mugikortasun Optimoa Pertsonen Atzigarritasunarentzat
     </footer>
 </body>
 
